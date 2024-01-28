@@ -1,20 +1,26 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './componenets/pages/home/home.component';
+import { HeaderComponent } from './componenets/partials/header/header.component';
+import { NgModule } from '@angular/core';
+import { ItemPageComponent } from './componenes/pages/item-page/item-page.component';
+
+//import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    ItemPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+    //RatingModule
   ],
-  providers: [
-    provideClientHydration()
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

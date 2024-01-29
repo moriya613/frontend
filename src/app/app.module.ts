@@ -4,7 +4,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './componenets/pages/home/home.component';
 import { HeaderComponent } from './componenets/partials/header/header.component';
 import { NgModule } from '@angular/core';
-import { ItemPageComponent } from './componenes/pages/item-page/item-page.component';
+import { ItemPageComponent } from './componenets/pages/item-page/item-page.component';
+import { CartPageComponent } from './componenets/pages/cart-page/cart-page.component';
+import { TitleComponent } from './componenets/partials/title/title.component';
 
 //import { RatingModule } from 'ng-starrating';
 
@@ -14,6 +16,8 @@ import { ItemPageComponent } from './componenes/pages/item-page/item-page.compon
     HeaderComponent,
     HomeComponent,
     ItemPageComponent,
+    CartPageComponent,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,

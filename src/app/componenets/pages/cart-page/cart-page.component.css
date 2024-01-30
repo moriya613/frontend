@@ -33,7 +33,7 @@
   li img{
     width: 5rem;
     height: 5rem;
-    border-radius: 100rem;
+    border-radius: 0.5rem;
     object-fit: cover;
   }
   
@@ -96,12 +96,12 @@
   }
   
   .total-count::before{
-    content:"Count: ";
+    content:"כמות: ";
     color: grey;
   }
   
   .total-price::before{
-    content: 'Price: ';
+    content: 'מחיר: ';
     color: grey;
   }
   

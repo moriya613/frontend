@@ -1,10 +1,10 @@
 <app-title title="הלוח שלי" margine="1.5rem 0 0 2.5rem"></app-title>
 
-<div class="containter">
+<div class="container">
     <ul>
         <li *ngFor="let cartItem of cart.items">
             <div>
-                <img [src]="cartItem.item.imageUrl" [alt]="cartItem.item.name">
+                <img [src]="cartItem.item.imageUrl" [alt]="cartItem.item.name" drag>
             </div>
 
             <div>
@@ -40,11 +40,22 @@
 
     <div class="checkout">
         <div>
- <div class="total-count">{{cart.totalCount}}</div>
-        <div class="total-price">{{cart.totalPrice}}</div>
+            <div class="total-count">{{cart.totalCount}}</div>
+            <div class="total-price">  &#8362; {{cart.totalPrice}}</div>
         </div>
-       
+        
         <a routerLink="/checkout">סיים לוח</a>
 
     </div>
+</div>
+
+<div class="board" >
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.item.imageUrl" cdkDrag>
+            </div>
+
+        </li>
+    </ul>
 </div>

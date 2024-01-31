@@ -13,7 +13,7 @@ export class ItemsService {
     return sample_items;
   }
 
-  getAllFoodBySearchTerm(searchTerm:string){
+  getAllItemsBySearchTerm(searchTerm:string){
     return this.getAll().filter(item => item.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()));
   }
 

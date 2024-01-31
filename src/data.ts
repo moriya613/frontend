@@ -9,8 +9,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/100Board.png',
       tags: ['חשבון', 'מתמטיקה'],
-      width: 5,
-      length: 5
+      width: 80,
+      length: 100
     },
     {
       id:'2',
@@ -20,8 +20,8 @@ export const sample_items: Item[] = [
       uses: 7,
       imageUrl: 'assets/Elul.png',
       tags: ['חגים', 'תשרי'],
-      width: 5,
-      length: 5
+      width: 170,
+      length: 150
     },
     {
       id:'3',
@@ -31,8 +31,8 @@ export const sample_items: Item[] = [
       uses: 3,
       imageUrl: 'assets/letters.png',
       tags: ['אותיות', 'כיתה א'],
-      width: 5,
-      length: 5
+      width: 100,
+      length: 100
     },
     {
       id:'4',
@@ -42,8 +42,8 @@ export const sample_items: Item[] = [
       uses: 3,
       imageUrl: 'assets/MaBakalmar.png',
       tags: ['כיתה א'],
-      width: 5,
-      length: 5
+      width: 120,
+      length: 120
     },
     {
       id:'5',
@@ -53,9 +53,8 @@ export const sample_items: Item[] = [
       uses: 0,
       imageUrl: 'assets/MathTitle.png',
       tags: ['חשבון', 'מתמטיקה'],
-      width: 5,
-      length: 5
-    },
+      width: 100,
+      length: 50    },
     {
       id:'6',
       name: 'תוצרי כתיבה',
@@ -64,7 +63,7 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/WriteProdct.png',
       tags: ['עברית', 'שפה'],
-      width: 5,
-      length: 5
+      width: 70,
+      length: 70
     },
   ]

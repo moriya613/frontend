@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './componenets/pages/home/home.component';
-import { HeaderComponent } from './componenets/partials/header/header.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { HeaderComponent } from './components/partials/header/header.component';
 import { NgModule } from '@angular/core';
-import { ItemPageComponent } from './componenets/pages/item-page/item-page.component';
-import { CartPageComponent } from './componenets/pages/cart-page/cart-page.component';
-import { TitleComponent } from './componenets/partials/title/title.component';
-
+import { ItemPageComponent } from './components/pages/item-page/item-page.component';
+import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
+import { TitleComponent } from './components/partials/title/title.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { SearchComponent } from './components/partials/search/search.component';
 //import { RatingModule } from 'ng-starrating';
 
 @NgModule({
@@ -18,10 +20,13 @@ import { TitleComponent } from './componenets/partials/title/title.component';
     ItemPageComponent,
     CartPageComponent,
     TitleComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    DragDropModule
     //RatingModule
   ],
   providers: [],

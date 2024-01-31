@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemsService } from '../../../services/items.service';
 import { Item } from '../../../shared/models/Item';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -11,8 +12,14 @@ import { Item } from '../../../shared/models/Item';
 export class HomeComponent implements OnInit {
 
   public items:Item[] = [];
-  constructor(private itemsService:ItemsService) {
-    this.items = itemsService.getAll();
+
+  constructor(private itemService:ItemsService, activatedRoute:ActivatedRoute) {
+    activatedRoute.params.subscribe((params) => {
+      if(params.searchTerm)
+      this.items = this.itemService.getAllItemsBySearchTerm(params.searchTerm);
+      else
+      this.items = itemService.getAll();
+    })
   }
 
   ngOnInit(): void {

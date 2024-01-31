@@ -30,7 +30,7 @@
     border: none;
   }
   
-  li img{
+  .container ul li img{
     width: 5rem;
     height: 5rem;
     border-radius: 0.5rem;
@@ -121,3 +121,47 @@
     opacity: 1;
     cursor: pointer;
   }
+
+  .board {
+    width: 500px;
+    height: 300px;
+    border: 5px solid gainsboro;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-radius: 1rem;
+    margin: 20rem;
+    margin-top: 0.5rem;
+    margin-bottom: 10rem;
+  }
+
+  .board ul{
+    display: inline-block;
+    flex-direction: column;
+    flex:3 0;
+    justify-content: space-evenly;
+    border: none;
+    border-radius: 1rem;
+    list-style: none;
+    margin: 0.5rem;
+    padding: 0;
+  }
+
+  .board ul li{
+    display: inline-block;
+    flex-direction: column;
+    flex:3 0;
+    justify-content: space-evenly;
+    border: none;
+    border-radius: 1rem;
+    list-style: none;
+    margin: 0.5rem;
+    padding: 0;
+  }
+
+  .board ul li img{
+    object-fit: contain;
+  }
+
+ 

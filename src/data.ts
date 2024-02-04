@@ -1,4 +1,5 @@
 import { Item } from "./app/shared/models/Item";
+import { Tag } from "./app/shared/models/Tag";
 
 export const sample_items: Item[] = [
     {
@@ -66,4 +67,16 @@ export const sample_items: Item[] = [
       width: 70,
       length: 70
     },
+  ];
+
+  export const sample_tags: Tag[] = [
+    {name:'חשבון', count:2},
+    {name:'חגים', count:2},
+    {name:'תשרי', count:2},
+    {name:'אותיות', count:2},
+    {name:'כיתה א', count:2},
+    {name:'מתמטיקה', count:2},
+    {name:'שפה', count:1},
+    {name:'עברית', count:1}
+
   ]

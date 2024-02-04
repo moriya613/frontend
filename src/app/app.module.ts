@@ -10,7 +10,9 @@ import { TitleComponent } from './components/partials/title/title.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { SearchComponent } from './components/partials/search/search.component';
+import { TagsComponent } from './components/partials/tags/tags.component';
 //import { RatingModule } from 'ng-starrating';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { SearchComponent } from './components/partials/search/search.component';
     CartPageComponent,
     TitleComponent,
     SearchComponent,
+    TagsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    HttpClientModule
     //RatingModule
   ],
   providers: [],

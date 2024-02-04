@@ -3,6 +3,7 @@ import { Cart } from '../shared/models/Cart';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Item } from '../shared/models/Item';
 import { CartItem } from '../shared/models/CartItem';
+import { Point } from '@angular/cdk/drag-drop';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,13 @@ export class CartService {
     this.setCartToLocalStorage();
   }
 
+  changePosition(imageUrl:string, position:Point){
+    let cartItem = this.cart.items.find(x=> x.item.imageUrl == imageUrl);
+    if(!cartItem)
+      return;
+    cartItem.position = position;
+    this.setCartToLocalStorage();
+  }
 
   clearCart(){
     this.cart = new Cart();

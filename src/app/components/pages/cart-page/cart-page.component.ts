@@ -25,8 +25,9 @@ export class CartPageComponent {
     this.cartService.changeQuantity(cartItem.item.id, quantity);
   }
 
-  public onDragEnded(event: CdkDragEnd): void {
-    console.log(event.source.getFreeDragPosition()); // returns { x: 0, y: 0 }
+  public onDragEnded(event: CdkDragEnd, imageUrl:string): void {
+   
+    this.cartService.changePosition(imageUrl,event.source.getFreeDragPosition());
     
   }
 }

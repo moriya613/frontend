@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemsService } from '../../../services/items.service';
 import { Item } from '../../../shared/models/Item';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -14,15 +15,24 @@ export class HomeComponent implements OnInit {
   public items:Item[] = [];
 
   constructor(private itemService:ItemsService, activatedRoute:ActivatedRoute) {
+    let itemsObservable: Observable<Item[]>;
+
     activatedRoute.params.subscribe((params) => {
       if(params.searchTerm)
-      this.items = this.itemService.getAllItemsBySearchTerm(params.searchTerm);
-      else
-      this.items = itemService.getAll();
+        itemsObservable = this.itemService.getAllItemsBySearchTerm(params.searchTerm);
+      else if(params.tag)
+      itemsObservable = this.itemService.getAllItemsByTag(params.tag);
+      else itemsObservable = itemService.getAll();
+
+      itemsObservable.subscribe((serverItems) => {
+        this.items = serverItems;
+      })
     })
   }
 
   ngOnInit(): void {
+    console.log("home cons")
+
   }
 
 }

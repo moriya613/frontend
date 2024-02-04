@@ -16,7 +16,8 @@ export class ItemPageComponent {
     private cartService:CartService, private router:Router) {
     activatedRoute.params.subscribe((params) => {
       if(params.id)
-      this.item = itemService.getItemById(params.id);
+      itemService.getItemById(params.id).subscribe(serverItem => {
+        this.item = serverItem});
     })
    }
 

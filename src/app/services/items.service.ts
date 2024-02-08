@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Item } from '../shared/models/Item';
 import { sample_items, sample_tags } from '../../data';
 import { Tag } from '../shared/models/Tag';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ITEMS_BY_ID_URL, ITEMS_BY_SEARCH_URL, ITEMS_BY_TAG_URL, ITEMS_TAGS_URL, ITEMS_URL } from '../shared/constants/urls';
 import { Observable } from 'rxjs';
 

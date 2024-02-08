@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   public items:Item[] = [];
 
   constructor(private itemService:ItemsService, activatedRoute:ActivatedRoute) {
+
     let itemsObservable: Observable<Item[]>;
 
     activatedRoute.params.subscribe((params) => {
@@ -25,13 +26,13 @@ export class HomeComponent implements OnInit {
       else itemsObservable = itemService.getAll();
 
       itemsObservable.subscribe((serverItems) => {
+
         this.items = serverItems;
       })
     })
   }
 
   ngOnInit(): void {
-    console.log("home cons")
 
   }
 

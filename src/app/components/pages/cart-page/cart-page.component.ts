@@ -11,6 +11,7 @@ import { CdkDragEnd } from '@angular/cdk/drag-drop';
 })
 export class CartPageComponent {
   cart!:Cart;
+  sizeInCm = 10; 
 
   constructor(private cartService:CartService){
     this.cartService.getCartObservable().subscribe((cart) => this.cart = cart);
